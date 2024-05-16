@@ -1,11 +1,11 @@
 class QueueSimple {
-  #items = []; // ES2020 private class fields，私有属性
+  #items = [];
   // 出队
-  delqueue() {
+  delQueue() {
     return this.#items.shift(); // 性能很差，每次出队都要把数组每一项前移
   }
   // 入队
-  addqueue(item) {
+  addQueue(item) {
     this.#items.push(item);
   }
   // 查看队首元素

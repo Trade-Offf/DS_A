@@ -3,8 +3,11 @@ export class QueueImproved {
   #lowCount = 0;
   #count = 0;
 
+  // 实现方式核心，删除对象的属性，手动记录队列的起始位置
+  // 性能优于 QueueSimple.js
+
   // 出队
-  delqueue() {
+  delQueue() {
     if (this.isEmpty() === 0) {
       return undefined;
     }
@@ -15,7 +18,7 @@ export class QueueImproved {
   }
 
   // 入队
-  addqueue(data) {
+  addQueue(data) {
     this.#items[this.#count] = data;
     this.#count++;
   }
