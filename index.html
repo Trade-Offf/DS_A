@@ -7,9 +7,16 @@
   </head>
   <body>
     <script type="module">
-      import { Set } from "./04-Set.js";
-      let mySet = new Set();
-      window.mySet = mySet;
+      import { BST } from "./06-BST.js";
+      let Tree1 = new BST();
+      Tree1.insert(10);
+      Tree1.insert(5);
+      Tree1.insert(15);
+      Tree1.insert(3);
+      Tree1.insert(7);
+
+      window.tree = Tree1;
+      window.tree.postOrderTraverse((node) => console.log(node));
     </script>
   </body>
 </html>
